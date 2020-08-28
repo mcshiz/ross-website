@@ -11,4 +11,4 @@ phases:
   post_build:
     commands:
         - aws s3 sync ./build s3://www.jlinstallers.com
-        - aws cloudfront create-invalidation --distribution-id E3PM6PSYNOP1P1
+        - aws cloudfront create-invalidation --distribution-id E3PM6PSYNOP1P1 --paths "/*"
